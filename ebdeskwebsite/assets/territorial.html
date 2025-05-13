@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territorial Intelligence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background-color: #0e3b62;
+            background-image: linear-gradient(to right, #0e3b62, #0e3b62), 
+                              url('/api/placeholder/1000/800');
+            background-blend-mode: multiply;
+            background-size: cover;
+        }
+        
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .left-column {
+            flex: 1;
+            padding-right: 20px;
+        }
+        
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            padding: 20px;
+            padding-bottom: 0;
+        }
+        
+        .use-case {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            color: #fff;
+            font-size: 34px;
+            font-weight: bold;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .arrow {
+            color: #5a9bd5;
+            font-size: 40px;
+            margin-left: 10px;
+        }
+        
+        .description {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.4;
+        }
+        
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #5a9bd5;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .map-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .map-image {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .flow-chart {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .feature-section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="use-case">USE CASE</div>
+        <h1 class="title">Territorial Intelligence <span class="arrow">»</span></h1>
+    </div>
+    
+    <div class="container">
+        <div class="left-column">
+            <p class="description">
+                A territorial intelligence system is a sophisticated framework designed to monitor, analyze, and manage data related to geographic and spatial events. Utilizing data science and generative AI, this system provides real-time monitoring, predictive analytics, and strategic recommendations to enhance decision-making processes. It is particularly valuable for governments, military organizations, businesses, and environmental agencies that require comprehensive insights into territorial dynamics.
+            </p>
+            
+            <ul>
+                <li><strong>Event Monitoring and Detection:</strong> Uses AI to continuously scan data sources for significant events, triggering real-time alerts.</li>
+                <li><strong>Real-Time Alerts and Notifications:</strong> Sends immediate alerts about detected events via email, SMS, or in-app messages.</li>
+                <li><strong>Predictive Analytics:</strong> Analyzes data to forecast future events and trends using machine learning models.</li>
+                <li><strong>Geospatial Data Visualization:</strong> Displays data on interactive maps and dashboards with tools like heat maps and trend lines.</li>
+                <li><strong>Risk Assessment and Management:</strong> Evaluates event impact and generates risk scores to prioritize response actions.</li>
+            </ul>
+            
+            <ul>
+                <li><strong>Strategic Recommendations:</strong> Provides actionable insights and recommendations based on data analysis.</li>
+                <li><strong>Data Integration and Management:</strong> Integrates data from multiple sources, ensuring comprehensive and up-to-date information.</li>
+                <li><strong>Customizable Reporting:</strong> Generates tailored reports summarizing key findings and insights.</li>
+                <li><strong>User Management and Security:</strong> Manages user access, data security, and compliance with regulations.</li>
+            </ul>
+        </div>
+        
+        <div class="right-column">
+            <div class="feature-section">
+                <div class="benefits">
+                    <h3>Benefits</h3>
+                    <ul>
+                        <li><strong>Situational Awareness:</strong> Real-time monitoring and alerts ensure information about critical events.</li>
+                        <li><strong>Proactive Risk Management:</strong> Predictive analytics and risk assessment tools help in anticipating and mitigating potential threats.</li>
+                        <li><strong>Informed Decision-Making:</strong> Strategic recommendations and scenario analysis support better planning and response strategies.</li>
+                        <li><strong>Efficient Resource Allocation:</strong> Optimize resources by identifying high-priority areas and actions.</li>
+                        <li><strong>Improved Coordination:</strong> Facilitates better communication and coordination among different agencies and departments.</li>
+                    </ul>
+                </div>
+                
+                <div class="map-section">
+                    <img src="images/Picture19.png" alt="Territorial Map" class="map-image">
+                </div>
+                
+                <div class="map-section">
+                    <img src="images/Picture20.jpg" alt="Flow Chart" class="flow-chart">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

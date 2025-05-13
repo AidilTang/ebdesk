@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimodal AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f0f0;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/api/placeholder/1200/800") center/cover;
+        }
+        
+        .left-section {
+            width: 40%;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .right-section {
+            width: 60%;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .arrow {
+            color: #4285f4;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .subtitle {
+            color: white;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .description {
+            color: white;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+        
+        .phone-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            margin-top: 2rem;
+        }
+        
+        .main-phone {
+            position: relative;
+            width: 300px;
+            height: 600px;
+            background-color: #333;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            z-index: 5;
+        }
+        
+        .main-phone-screen {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .phone {
+            position: absolute;
+            width: 180px;
+            height: 360px;
+            background-color: #333;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            overflow: hidden;
+        }
+        
+        .whatsapp {
+            bottom: 50px;
+            left: -50px;
+            transform: rotate(-15deg);
+            z-index: 1;
+        }
+        
+        .data-vis {
+            bottom: 20px;
+            left: 50px;
+            transform: rotate(-5deg);
+            z-index: 2;
+        }
+        
+        .chart {
+            bottom: 20px;
+            right: 50px;
+            transform: rotate(5deg);
+            z-index: 2;
+        }
+        
+        .document {
+            bottom: 50px;
+            right: -50px;
+            transform: rotate(15deg);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="arrow">→</div>
+            <h1>Multimodal</h1>
+            <p class="subtitle">Recognize and generate content across multiple types of data, such as text, images, audio, and video</p>
+        </div>
+        <div class="right-section">
+            <p class="description">
+                Multimodal generative AI refers to systems that can process and generate content 
+                across multiple types of data, such as text, images, audio, and video, 
+                simultaneously. These AI models are designed to understand and integrate 
+                information from different modalities to create cohesive and contextually relevant 
+                outputs. For example, a multimodal AI can generate descriptive text based on an 
+                image, create images from textual descriptions, or produce videos that 
+                synchronize visual and audio elements effectively.
+            </p>
+            <p class="description">
+                This capability is particularly useful in applications such as advanced virtual 
+                assistants, interactive media creation, and sophisticated data analysis, where 
+                understanding and generating diverse forms of content is essential. The 
+                integration of multiple modalities enhances the AI's ability to interact with and 
+                interpret the world in a more human-like manner, making it a powerful tool for 
+                innovation across various industries.
+            </p>
+            
+            <div class="phone-container">
+                <div class="main-phone">
+                    <div class="main-phone-screen">
+                        <img src="images/phone.jpg" alt="Main Phone" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                
+                <div class="phone whatsapp">
+                    <div class="phone-screen">
+                        <img src="images/phone2.png" alt="WhatsApp Interface" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                
+                <div class="phone data-vis">
+                    <div class="phone-screen">
+                        <img src="images/phone3.png" alt="Data Visualization" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                
+                <div class="phone chart">
+                    <div class="phone-screen">
+                        <img src="images/phone4.jpg" alt="Chart and Graphs" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                
+                <div class="phone document">
+                    <div class="phone-screen">
+                        <img src="images/phone5.png" alt="Document Analysis" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

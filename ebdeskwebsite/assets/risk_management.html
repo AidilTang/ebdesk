@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Management Solution</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        .container {
+            display: flex;
+            background: url('/api/placeholder/1200/800') right center no-repeat;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .left-content {
+            width: 40%;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        
+        .use-case {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-top: 0.5rem;
+            color: #222;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: "»";
+            position: absolute;
+            right: -40px;
+            top: 0;
+            color: #e67e22;
+            font-size: 2.5rem;
+            transform: scaleY(0.7);
+        }
+        
+        .description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .secondary-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .table-container {
+            position: absolute;
+            left: 30%;
+            right: 10%;
+            top: 15%;
+            bottom: 5%;
+            overflow: auto;
+        }
+        
+        table {
+            margin-left: 0;
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #222;
+            color: white;
+            font-size: 0.85rem;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #444;
+        }
+        
+        th {
+            background-color: #222;
+        }
+        
+        td {
+            background-color: #333;
+        }
+        
+        .dashboard-images {
+            position: absolute;
+            right: 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .dashboard-image {
+            width: 240px;
+            height: 150px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <p class="use-case">USE CASE</p>
+            <h1>Risk Management</h1>
+            <p class="description">
+                In an ever-evolving business landscape, managing risks effectively is crucial for organizational success and resilience. This innovative solution leverages state-of-the-art AI technology to identify, assess, and mitigate risks in real-time with modules designed for comprehensive risk analysis, predictive modeling, and compliance management.
+            </p>
+            <p class="secondary-text">
+                By integrating external threat intelligence and providing actionable insights through intuitive dashboards, the system empowers the organization to make informed decisions and maintain operational continuity. Embrace the future of <span class="highlight">risk management</span> with AI-driven platform, tailored to safeguard organization in a dynamic environment.
+            </p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Module</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Risk Identification</td>
+                    <td>Uses AI to scan data sources, identifying potential risks by analyzing trends and anomalies.</td>
+                </tr>
+                <tr>
+                    <td>Risk Assessment and Analysis</td>
+                    <td>Evaluates identified risks, calculating probability and impact, and prioritizing based on severity.</td>
+                </tr>
+                <tr>
+                    <td>Predictive Risk Modeling</td>
+                    <td>Predicts future risks using machine learning from historical data, forecasting emerging risks.</td>
+                </tr>
+                <tr>
+                    <td>Risk Mitigation Planning</td>
+                    <td>Generates actionable mitigation plans and suggests optimal strategies to reduce risk exposure.</td>
+                </tr>
+                <tr>
+                    <td>Compliance Management</td>
+                    <td>Monitors regulatory changes, ensuring adherence to regulations and standards, providing alerts.</td>
+                </tr>
+                <tr>
+                    <td>Incident Response</td>
+                    <td>Facilitates quick responses to risk incidents, creating reports and post-incident analysis.</td>
+                </tr>
+                <tr>
+                    <td>Reporting and Dashboard</td>
+                    <td>Provides real-time dashboards and reports on risk metrics and trends for stakeholders.</td>
+                </tr>
+                <tr>
+                    <td>Scenario Analysis and Simulation</td>
+                    <td>Allows creation and analysis of various risk scenarios, aiding in strategic decision-making.</td>
+                </tr>
+                <tr>
+                    <td>Vendor Risk Management</td>
+                    <td>Evaluates and monitors third-party vendor risks, assessing performance and compliance.</td>
+                </tr>
+                <tr>
+                    <td>Business Continuity Planning</td>
+                    <td>Develops business continuity plans, ensuring operational recovery during disruptions.</td>
+                </tr>
+                <tr>
+                    <td>Threat Intelligence Integration</td>
+                    <td>Integrates external threat intelligence, providing real-time alerts on global threats.</td>
+                </tr>
+                <tr>
+                    <td>Fraud Detection</td>
+                    <td>Detects and prevents fraudulent activities using AI algorithms to monitor for suspicious behavior.</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="dashboard-images">
+            <div class="dashboard-image" style="background: url('/api/placeholder/240/150') center/cover no-repeat; top: 20%;"></div>
+            <div class="dashboard-image" style="background: url('/api/placeholder/240/150') center/cover no-repeat; top: 50%;"></div>
+            <div class="dashboard-image" style="background: url('/api/placeholder/240/150') center/cover no-repeat; top: 80%;"></div>
+        </div>
+    </div>
+</body>
+</html>

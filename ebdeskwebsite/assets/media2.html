@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Intelligence Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 16px;
+            color: #000;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .header h2 {
+            font-size: 36px;
+            color: #000;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .header h2 .arrows {
+            color: #3498db;
+            margin-left: 15px;
+            font-size: 40px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .feature {
+            background-color: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .feature-header {
+            padding: 20px;
+        }
+        .feature-icon {
+            color: #e74c3c;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        .feature-subtitle {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+        .feature-description {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.4;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .img-container {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            overflow: hidden;
+            position: relative;
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .red-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .link {
+            color: #0645AD;
+            text-decoration: underline;
+        }
+        .highlight {
+            text-decoration: underline;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>USE CASE</h1>
+            <h2>Media Intelligence <span class="arrows">»</span></h2>
+        </div>
+        
+        <div class="features">
+            <!-- IMA Section -->
+            <div class="feature">
+                <div class="feature-header">
+                    <svg class="red-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#e74c3c" d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z"/>
+                    </svg>
+                    <h3 class="feature-title">IMA</h3>
+                    <h4 class="feature-subtitle">Intelligence Media Analytics</h4>
+                    <p class="feature-description">Media analysis from online, print, and TV media sources, including expose, issue, influencer, media share, sentiment, maps analysis, ontology, and other strategic analysis.</p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture10.jpg" alt="IMA Screenshot 1">
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture11.jpg" alt="IMA Screenshot 2">
+                </div>
+            </div>
+            
+            <!-- ISA Section -->
+            <div class="feature">
+                <div class="feature-header">
+                    <svg class="red-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#e74c3c" d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z"/>
+                    </svg>
+                    <h3 class="feature-title">ISA</h3>
+                    <h4 class="feature-subtitle">Intelligence Socio Analytics</h4>
+                    <p class="feature-description">Public opinion analysis from social media includes public perception of an event, figure, organization, case, issue, or policy, and public demographic analysis based on user profile (age, gender, location, activity, awareness, influence, hobby).</p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture4.jpg" alt="ISA Screenshot 1">
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture5.jpg" alt="ISA Screenshot 2">
+                </div>
+            </div>
+            
+            <!-- ANA Section -->
+            <div class="feature">
+                <div class="feature-header">
+                    <svg class="red-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#e74c3c" d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16"/>
+                    </svg>
+                    <h3 class="feature-title">ANA</h3>
+                    <h4 class="feature-subtitle">Advance Network Analysis</h4>
+                    <p class="feature-description">Raises analysis in the form of a network that interprets the relationship between accounts of an issue, influencers, buzzers, and liaisons between issues and accounts from social media such as Twitter, Instagram, and <span class="link">Youtube</span>.</p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture6.jpg" alt="ANA Screenshot 1">
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture7.jpg" alt="ANA Screenshot 2">
+                </div>
+            </div>
+            
+            <!-- IAS Section -->
+            <div class="feature">
+                <div class="feature-header">
+                    <svg class="red-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#e74c3c" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                    </svg>
+                    <h3 class="feature-title">IAS</h3>
+                    <h4 class="feature-subtitle">Information Admiralty System</h4>
+                    <p class="feature-description">A system that is able to monitor information on media and social media in real time, recognize issues, detect potential hoaxes, propaganda, <span class="highlight">hatespeech</span>, demographic spread, psychography, engagement.</p>
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture8.jpg" alt="IAS Screenshot 1">
+                </div>
+                <div class="img-container">
+                    <img src="images/Picture9.jpg" alt="IAS Screenshot 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

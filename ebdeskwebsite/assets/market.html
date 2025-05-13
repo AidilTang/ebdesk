@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Intelligence Use Case</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffffff 50%, #f0f0f0 50%);
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url('/api/placeholder/1000/1000');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+            background-blend-mode: overlay;
+            pointer-events: none;
+        }
+        .content {
+            display: flex;
+            width: 100%;
+            z-index: 1;
+        }
+        .left-column {
+            flex: 1;
+            padding: 40px;
+            max-width: 50%;
+        }
+        .right-column {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .header {
+            margin-bottom: 20px;
+        }
+        .use-case {
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+        .title {
+            color: #000;
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        .title-arrow {
+            color: #ff7722;
+            font-size: 40px;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+        .description {
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #333;
+        }
+        li ul {
+            margin-top: 8px;
+        }
+        .triangle {
+            width: 100%;
+            max-width: 320px;
+            margin-top: auto;
+            align-self: center;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .network-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left-column">
+                <div class="header">
+                    <p class="use-case">USE CASE</p>
+                    <h1 class="title">Market Intelligence <span class="title-arrow">»</span></h1>
+                </div>
+                <p class="description">
+                    Market intelligence system is a comprehensive framework designed to gather, analyze, and interpret data related to market trends, competitors, and consumer behaviors. This system helps businesses make informed decisions by providing insights into market dynamics and identifying opportunities and threats.
+                </p>
+                <ul>
+                    <li><span class="section-title">Data Collection:</span>
+                        <ul>
+                            <li>System collects data from various sources, including market reports, financial news, customer feedback, social media, sales data, and industry publications.</li>
+                        </ul>
+                    </li>
+                    <li><span class="section-title">Data Analysis:</span>
+                        <ul>
+                            <li>Trend Analysis: Identifies market trends and patterns to forecast future market conditions and consumer behavior.</li>
+                            <li>Competitive Analysis: Examines competitors' activities, strengths, weaknesses, market share, and strategies.</li>
+                        </ul>
+                    </li>
+                    <li><span class="section-title">Market Segmentation:</span>
+                        <ul>
+                            <li>Segmentation Techniques: Divides the market into distinct segments based on demographics, psychographics, behavior, and geographic.</li>
+                            <li>Targeting: Helps businesses identify and target the most profitable market segments.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-column">
+                <div>
+                    <ul>
+                        <li><span class="section-title">Consumer Insights:</span>
+                            <ul>
+                                <li>Behavioral Analysis: Studies consumer behavior, preferences, and purchasing patterns to understand what drives their decisions.</li>
+                            </ul>
+                        </li>
+                        <li><span class="section-title">Customer Feedback:</span> Analyzes feedback from various channels to gauge customer satisfaction and identify areas for improvement.</li>
+                        <li><span class="section-title">Real-Time Monitoring:</span>
+                            <ul>
+                                <li>Market Dynamics: Continuously monitors changes in the market environment, including new product launches, regulatory changes, and economic shifts.</li>
+                                <li>Alerts and Notifications: Provides real-time alerts on significant market events or changes.</li>
+                            </ul>
+                        </li>
+                        <li><span class="section-title">Strategic Recommendations:</span>
+                            <ul>
+                                <li>Actionable Insights: Offers strategic recommendations based on the analysis to help businesses optimize their marketing strategies, product development, and overall business operations.</li>
+                                <li>Scenario Planning: Assists in planning for various market scenarios to mitigate risks and capitalize on opportunities.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <div style="margin-top: 20px;">
+                        <p class="section-title">Use Case</p>
+                        <ul>
+                            <li>Product Development: Identifying consumer needs and market gaps to develop new products or improve existing ones.</li>
+                            <li>Marketing Strategies: Crafting effective marketing campaigns based on market and consumer insights.</li>
+                            <li>Sales Optimization: Enhancing sales strategies and identifying new sales opportunities.</li>
+                            <li>Business Expansion: Assisting in market entry strategies and identifying new geographical markets.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="triangle">
+                    <svg viewBox="0 0 320 270" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Main Triangle -->
+                        <polygon points="160,0 0,270 320,270" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+                        
+                        <!-- Market Intelligence Label -->
+                        <text x="160" y="90" text-anchor="middle" font-weight="bold" font-size="14">Market</text>
+                        <text x="160" y="110" text-anchor="middle" font-weight="bold" font-size="14">Intelligence</text>
+                        
+                        <!-- Second Level -->
+                        <line x1="160" y1="120" x2="80" y2="180" stroke="#333" stroke-width="1"/>
+                        <line x1="160" y1="120" x2="240" y2="180" stroke="#333" stroke-width="1"/>
+                        
+                        <text x="80" y="170" text-anchor="middle" font-weight="bold" font-size="12">Competitive</text>
+                        <text x="80" y="185" text-anchor="middle" font-weight="bold" font-size="12">Insight</text>
+                        
+                        <text x="240" y="170" text-anchor="middle" font-weight="bold" font-size="12">Market</text>
+                        <text x="240" y="185" text-anchor="middle" font-weight="bold" font-size="12">Insight</text>
+                        
+                        <!-- Third Level -->
+                        <line x1="80" y1="190" x2="40" y2="230" stroke="#333" stroke-width="1"/>
+                        <line x1="80" y1="190" x2="120" y2="230" stroke="#333" stroke-width="1"/>
+                        <line x1="240" y1="190" x2="200" y2="230" stroke="#333" stroke-width="1"/>
+                        <line x1="240" y1="190" x2="280" y2="230" stroke="#333" stroke-width="1"/>
+                        
+                        <!-- Bottom Level Labels -->
+                        <rect x="20" y="220" width="40" height="30" fill="#ffffcc" stroke="#333" stroke-width="1"/>
+                        <rect x="100" y="220" width="40" height="30" fill="#ffffcc" stroke="#333" stroke-width="1"/>
+                        <rect x="180" y="220" width="40" height="30" fill="#ffffcc" stroke="#333" stroke-width="1"/>
+                        <rect x="260" y="220" width="40" height="30" fill="#ffffcc" stroke="#333" stroke-width="1"/>
+                        
+                        <text x="40" y="235" text-anchor="middle" font-size="10">Competitor</text>
+                        <text x="40" y="245" text-anchor="middle" font-size="10">Intelligence</text>
+                        
+                        <text x="120" y="235" text-anchor="middle" font-size="10">Product</text>
+                        <text x="120" y="245" text-anchor="middle" font-size="10">Intelligence</text>
+                        
+                        <text x="200" y="235" text-anchor="middle" font-size="10">Market</text>
+                        <text x="200" y="245" text-anchor="middle" font-size="10">Understanding</text>
+                        
+                        <text x="280" y="235" text-anchor="middle" font-size="10">Customer</text>
+                        <text x="280" y="245" text-anchor="middle" font-size="10">Insight</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

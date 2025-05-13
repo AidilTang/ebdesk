@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Warfare Use Case</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #e6e6e6;
+            color: #333;
+        }
+        
+        .header {
+            padding: 20px 50px;
+            background-color: #e6e6e6;
+        }
+        
+        .use-case {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .arrows {
+            color: #ff3232;
+            font-size: 32px;
+            margin-left: 15px;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 40px;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: white;
+            width: calc(25% - 20px);
+            min-width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+        }
+        
+        .card-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        
+        .hexagon {
+            color: #c82333;
+        }
+        
+        .rocket {
+            color: #dc3545;
+        }
+        
+        .megaphone {
+            color: #6c757d;
+        }
+        
+        .robot {
+            color: #17a2b8;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .subtitle {
+            padding: 0 15px 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .card-content {
+            padding: 0 15px;
+            font-size: 13px;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+        
+        .image-container {
+            padding: 15px;
+            margin-top: auto;
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="use-case">USE CASE</div>
+        <div class="title">
+            Information Warfare
+            <span class="arrows">»</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Card 1 - Massive Profiling -->
+        <div class="card">
+            <div class="card-header">
+                <div class="icon hexagon">⬢</div>
+                <div class="card-title">Massive Profiling</div>
+            </div>
+            <div class="subtitle">Intelligence Massive Profiling</div>
+            <div class="card-content">
+                Mapping hundreds of millions of social media accounts for demographic analysis, psychography, networking, and connection, for tactical and strategic problem solving.
+            </div>
+            <div class="image-container">
+                <div class="card-image">
+                    <img src="" alt="Analytics dashboard showing social media profiling charts" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2 - RTA -->
+        <div class="card">
+            <div class="card-header">
+                <div class="icon rocket">🚀</div>
+                <div class="card-title">RTA</div>
+            </div>
+            <div class="subtitle">Real Time Analytics</div>
+            <div class="card-content">
+                More in-depth analysis of issues in realtime both potentially trending, finding the origin of issues (actors), both on social media such as Twitter and Facebook, as well as Group Messenger, such as Whatsapp and Telegram.
+            </div>
+            <div class="image-container">
+                <div class="card-image">
+                    <img src="images/Picture13.png" alt="Network analysis visualization with nodes and connections" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 3 - ICM -->
+        <div class="card">
+            <div class="card-header">
+                <div class="icon megaphone">📢</div>
+                <div class="card-title">ICM</div>
+            </div>
+            <div class="subtitle">Intelligence Campaign Management</div>
+            <div class="card-content">
+                Harnesses the power of Generative AI and data science to optimize campaigns with unprecedented precision and efficiency. AI can automate and personalize campaign elements, including content creation, audience targeting, and timing, ensuring that messages resonate with the right audience at the right time. Furthermore, AI-driven tools provide real-time performance analytics, enabling users to continuously monitor and adjust campaigns for optimal results.
+            </div>
+            <div class="image-container">
+                <div class="card-image">
+                    <img src="images/Picture12.jpg" alt="Campaign dashboard with metrics and analytics" />
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 4 - ICT -->
+        <div class="card">
+            <div class="card-header">
+                <div class="icon robot">🤖</div>
+                <div class="card-title">ICT</div>
+            </div>
+            <div class="subtitle">Intelligence CyberTroops / Avatar</div>
+            <div class="card-content">
+                AI-based avatar management software transforms the way digital personas are created, managed, and utilized across various platforms. This software leverages Generative AI to generate highly realistic and customizable avatars, reflecting individual preferences, enhancing user engagement and interaction. AI-driven avatar management systems can continuously learn and adapt, improving their responsiveness and effectiveness over time.
+            </div>
+            <div class="image-container">
+                <div class="card-image">
+                    <img src="images/Screenshot 2025-05-13 022926.jpg" alt="Digital avatar visualization and management interface" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

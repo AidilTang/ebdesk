@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Center AI Assistant</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            height: 100%;
+            overflow-x: hidden;
+        }
+        
+        .main-container {
+            position: relative;
+            background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('/api/placeholder/1400/800') no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(19, 56, 99, 0.9) 40%, rgba(19, 56, 99, 0.7) 70%, rgba(19, 56, 99, 0.6) 100%);
+            z-index: 1;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .header {
+            padding: 1rem 0;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .header h2 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0 1.5rem 0;
+        }
+        
+        .blue-arrow {
+            color: #6DA1E8;
+            font-size: 3rem;
+            margin: 0 1rem;
+        }
+        
+        .two-column {
+            display: flex;
+            gap: 5%;
+            margin-bottom: 2rem;
+        }
+        
+        .column {
+            flex: 1;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .timeline {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 2rem 0;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 11%;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: #5785D0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .step-connector {
+            width: 30px;
+            height: 2px;
+            background-color: #5785D0;
+            margin: 0 -15px;
+        }
+        
+        .step-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .step-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="header">
+            <h1>USE CASE</h1>
+            <h2>Data Center AI Assistant <span class="blue-arrow">≫</span></h2>
+        </div>
+
+        <div class="two-column">
+            <div class="column">
+                <p>In today's fast-paced network environments, troubleshooting and resolving issues quickly is paramount. AI Assistant is at the heart of this expedient approach to problem-solving by leveraging state-of-the-art Natural Language Processing (NLP) to transforms the way network problems are identified and diagnosed.</p>
+                <p>When users encounter network glitches, the clarity of communication between them and the support systems can significantly impact the resolution time. Traditional systems rely on structured input, which requires users to identify and categorize their issues before any diagnostic process can begin.</p>
+            </div>
+            <div class="column">
+                <p>In the realm of network management, data integration represents a foundational component that underpins all aspects of diagnostics, troubleshooting, and maintenance. It is the meticulous process of consolidating data from an array of internal and external sources to construct a comprehensive, 360-degree view of the network's ecosystem.</p>
+                <p>The integration with network monitoring tools is a pivotal feature that enhances the capabilities of a network management system by allowing it to access and consolidate data from a multitude of network monitoring applications and devices.</p>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Chat-Based Interaction:</div>
+                    <p>Allows users to interact with the virtual assistant through a chat interface.</p>
+                </div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Automatic Diagnosis:</div>
+                    <p>based on the error description from the user using Natural Language Processing (NLP).</p>
+                </div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Data Integration:</div>
+                    <p>combine data from manuals, configuration documents, and the internet to provide comprehensive solutions.</p>
+                </div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <div class="step-title">Solutions Database:</div>
+                    <p>maintenance of a solutions database derived from previous cases to speed up the troubleshooting process.</p>
+                </div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <div class="step-title">License Alerts:</div>
+                    <p>Notification system for licenses that are about to expire.</p>
+                </div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <div class="step-title">Multi-Vendor Support:</div>
+                    <p>Support for devices from various vendors with the ability to automatically update the device data database.</p>
+                </div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">7</div>
+                <div class="step-content">
+                    <div class="step-title">Integration with Network Monitoring:</div>
+                    <p>The ability to integrate and retrieve data from existing network monitoring tools.</p>
+                </div>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step">
+                <div class="step-number">8</div>
+                <div class="step-content">
+                    <div class="step-title">Automatic Updates:</div>
+                    <p>An automatic update feature from internet sources to add the latest solutions and product information.</p>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+
+</body>
+</html>
