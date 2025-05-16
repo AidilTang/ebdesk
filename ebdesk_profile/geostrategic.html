@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geostrategic Intelligence System Mind Map</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+    }
+
+    .mind-map {
+      position: relative;
+      height: 550px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .node {
+      position: absolute;
+      border-radius: 4px;
+      padding: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .node:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    
+    .node-icon {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+    
+    .node-title {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .node-content {
+      font-size: 12px;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s ease;
+      opacity: 0;
+      position: absolute;
+      background-color: inherit;
+      border-radius: 4px;
+      padding: 0;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .node.expanded .node-content {
+      height: auto;
+      opacity: 1;
+      padding: 12px;
+    }
+
+    .main-node {
+      background-color: #2c3e50;
+      color: white;
+      z-index: 10;
+      width: 60%;
+      height: 50px;
+    }
+
+    .sub-node-1 {
+      background-color: #3498db;
+      color: white;
+      width: 30%;
+      height: 40px;
+    }
+
+    .sub-node-2 {
+      background-color: #e74c3c;
+      color: white;
+      width: 30%;
+      height: 40px;
+    }
+
+    .sub-node-3 {
+      background-color: #2ecc71;
+      color: white;
+      width: 40%;
+      height: 40px;
+    }
+
+    .sub-node-4 {
+      background-color: #f39c12;
+      color: white;
+      width: 20%;
+      height: 40px;
+    }
+
+    .sub-node-5 {
+      background-color: #9b59b6;
+      color: white;
+      width: 25%;
+      height: 40px;
+    }
+
+    .sub-node-6 {
+      background-color: #1abc9c;
+      color: white;
+      width: 15%;
+      height: 40px;
+    }
+
+    .sub-node-7 {
+      background-color: #e67e22;
+      color: white;
+      width: 50%;
+      height: 40px;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .connection {
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .legend {
+      background-color: white;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .legend-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .legend-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
+
+    .legend-color {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .control-btn {
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .control-btn:hover {
+      background-color: #34495e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="mind-map" id="mindMap">
+      <svg id="connections"></svg>
+    </div>
+    
+    <div class="controls">
+      <button class="control-btn" id="expandAll">Expand All</button>
+      <button class="control-btn" id="collapseAll">Collapse All</button>
+      <button class="control-btn" id="resetView">Reset View</button>
+    </div>
+    
+    <div class="legend">
+      <div class="legend-title">Components of Geostrategic Intelligence System:</div>
+      <div class="legend-items">
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #2c3e50;"></div>
+          <div>Geostrategic Intelligence System</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #3498db;"></div>
+          <div>Data Collection</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #e74c3c;"></div>
+          <div>Analysis and Interpretation</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #2ecc71;"></div>
+          <div>Scenario Simulation</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #f39c12;"></div>
+          <div>Risk Assessment</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #9b59b6;"></div>
+          <div>Visualization and Reporting</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #1abc9c;"></div>
+          <div>Real-Time Monitoring</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-color" style="background-color: #e67e22;"></div>
+          <div>Strategic Recommendations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mindMap = document.getElementById('mindMap');
+      const svg = document.getElementById('connections');
+      
+      // Node data
+      const nodes = [
+        {
+          id: 'main',
+          title: 'Geostrategic Intelligence System',
+          content: 'A comprehensive framework designed to gather, analyze, and interpret data related to the geopolitical and strategic environment.',
+          class: 'main-node',
+          icon: '🌐',
+          x: 50,
+          y: 40
+        },
+        {
+          id: 'data',
+          title: 'Data Collection',
+          content: 'Aggregates data from various sources, including satellite imagery, social media, news reports, governmental databases, and open-source intelligence (OSINT).',
+          class: 'sub-node-1',
+          icon: '📊',
+          x: 15,
+          y: 15
+        },
+        {
+          id: 'analysis',
+          title: 'Analysis & Interpretation',
+          content: 'Evaluates collected data to identify patterns, trends, and potential threats to understand the strategic implications of different geopolitical events and developments.',
+          class: 'sub-node-2',
+          icon: '🔍',
+          x: 80,
+          y: 15
+        },
+        {
+          id: 'simulation',
+          title: 'Scenario Simulation',
+          content: 'Simulates various geopolitical scenarios to predict potential outcomes and impacts, crucial for strategic planning and decision-making.',
+          class: 'sub-node-3',
+          icon: '🔮',
+          x: 20,
+          y: 65
+        },
+        {
+          id: 'risk',
+          title: 'Risk Assessment',
+          content: 'Assesses risks associated with geopolitical changes, including political instability, economic sanctions, military conflicts, and other threats.',
+          class: 'sub-node-4',
+          icon: '⚠️',
+          x: 55,
+          y: 55
+        },
+        {
+          id: 'visualization',
+          title: 'Visualization & Reporting',
+          content: 'Presents analyzed data in an easily interpretable format, such as interactive dashboards, maps, and detailed reports.',
+          class: 'sub-node-5',
+          icon: '📈',
+          x: 85,
+          y: 55
+        },
+        {
+          id: 'monitoring',
+          title: 'Real-Time Monitoring',
+          content: 'Continuous monitoring of geopolitical events allows for real-time updates and alerts, enabling swift responses to emerging threats or opportunities.',
+          class: 'sub-node-6',
+          icon: '⏱️',
+          x: 90,
+          y: 75
+        },
+        {
+          id: 'recommendations',
+          title: 'Strategic Recommendations',
+          content: 'Based on the analysis, provides strategic recommendations to policymakers, business leaders, and military commanders.',
+          class: 'sub-node-7',
+          icon: '💡',
+          x: 50,
+          y: 87
+        }
+      ];
+      
+      // Create connections
+      const connections = [
+        { from: 'main', to: 'data' },
+        { from: 'main', to: 'analysis' },
+        { from: 'main', to: 'simulation' },
+        { from: 'main', to: 'risk' },
+        { from: 'main', to: 'visualization' },
+        { from: 'main', to: 'monitoring' },
+        { from: 'main', to: 'recommendations' },
+        { from: 'data', to: 'analysis' },
+        { from: 'data', to: 'main' },
+        { from: 'analysis', to: 'main' },
+        { from: 'analysis', to: 'simulation' },
+        { from: 'analysis', to: 'risk' },
+        { from: 'analysis', to: 'recommendations' },
+        { from: 'risk', to: 'recommendations' },
+        { from: 'simulation', to: 'recommendations' },
+        { from: 'monitoring', to: 'data' },
+        { from: 'visualization', to: 'recommendations' }
+      ];
+
+      // Create DOM elements for nodes
+      nodes.forEach(node => {
+        const nodeElement = document.createElement('div');
+        nodeElement.id = node.id;
+        nodeElement.className = `node ${node.class}`;
+        nodeElement.style.left = `${node.x}%`;
+        nodeElement.style.top = `${node.y}%`;
+        nodeElement.style.transform = 'translate(-50%, -50%)';
+        
+        nodeElement.innerHTML = `
+          <span class="node-icon">${node.icon}</span>
+          <span class="node-title">${node.title}</span>
+          <div class="node-content">${node.content}</div>
+        `;
+        
+        nodeElement.addEventListener('click', function() {
+          this.classList.toggle('expanded');
+          drawConnections();
+        });
+        
+        mindMap.appendChild(nodeElement);
+      });
+
+      // Function to draw connections
+      function drawConnections() {
+        svg.innerHTML = '';
+        
+        connections.forEach(conn => {
+          const fromNode = document.getElementById(conn.from);
+          const toNode = document.getElementById(conn.to);
+          
+          if (fromNode && toNode) {
+            const fromRect = fromNode.getBoundingClientRect();
+            const toRect = toNode.getBoundingClientRect();
+            const mapRect = mindMap.getBoundingClientRect();
+            
+            const fromX = fromRect.left + fromRect.width / 2 - mapRect.left;
+            const fromY = fromRect.top + fromRect.height / 2 - mapRect.top;
+            const toX = toRect.left + toRect.width / 2 - mapRect.left;
+            const toY = toRect.top + toRect.height / 2 - mapRect.top;
+            
+            // Simple direct lines instead of curved
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+            
+            // Determine the color based on starting node
+            let color;
+            switch(conn.from) {
+              case 'main': color = '#2c3e50'; break;
+              case 'data': color = '#3498db'; break;
+              case 'analysis': color = '#e74c3c'; break;
+              case 'simulation': color = '#2ecc71'; break;
+              case 'risk': color = '#f39c12'; break;
+              case 'visualization': color = '#9b59b6'; break;
+              case 'monitoring': color = '#1abc9c'; break;
+              case 'recommendations': color = '#e67e22'; break;
+              default: color = '#95a5a6';
+            }
+            
+            path.setAttribute('x1', fromX);
+            path.setAttribute('y1', fromY);
+            path.setAttribute('x2', toX);
+            path.setAttribute('y2', toY);
+            path.setAttribute('stroke', color);
+            path.setAttribute('class', 'connection');
+            svg.appendChild(path);
+          }
+        });
+      }
+
+      // Initial draw of connections
+      setTimeout(drawConnections, 100);
+      
+      // Handle window resize
+      window.addEventListener('resize', drawConnections);
+      
+      // Controls functionality
+      document.getElementById('expandAll').addEventListener('click', function() {
+        document.querySelectorAll('.node').forEach(node => {
+          node.classList.add('expanded');
+        });
+        drawConnections();
+      });
+      
+      document.getElementById('collapseAll').addEventListener('click', function() {
+        document.querySelectorAll('.node').forEach(node => {
+          node.classList.remove('expanded');
+        });
+        drawConnections();
+      });
+      
+      document.getElementById('resetView').addEventListener('click', function() {
+        document.querySelectorAll('.node').forEach(node => {
+          const originalNode = nodes.find(n => n.id === node.id);
+          node.style.left = `${originalNode.x}%`;
+          node.style.top = `${originalNode.y}%`;
+        });
+        drawConnections();
+      });
+    });
+  </script>
+</body>
+</html>

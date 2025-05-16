@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Geology Zoom Center</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1;
+      position: relative;
+    }
+
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.3);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      z-index: 10;
+    }
+
+    .popup-container.visible {
+      display: block;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .popup-image {
+      max-width: 80vw;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    .popup-image.fade {
+      opacity: 0;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      user-select: none;
+    }
+
+    .nav-button:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    #prevBtn {
+      left: -60px;
+    }
+
+    #nextBtn {
+      right: -60px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Click the Button to Reveal Geology Image</h1>
+  
+  <button onclick="togglePopup()">Geology</button>
+  
+  <div id="popup" class="popup-container">
+    <button class="nav-button" id="prevBtn" onclick="changeImage(-1)">&lt;</button>
+    <img id="popupImage" class="popup-image" src="asset/img/banner.jpg" alt="Geology Landscape" />
+    <button class="nav-button" id="nextBtn" onclick="changeImage(1)">&gt;</button>
+  </div>
+
+  <script>
+    const images = [
+      "asset/img/banner.jpg",
+      "asset/img/gen.jpg",
+      "asset/img/img1.png"
+    ];
+
+    let currentIndex = 0;
+
+    function togglePopup() {
+      const popup = document.getElementById("popup");
+      const image = document.getElementById("popupImage");
+
+      if (popup.classList.contains("visible")) {
+        popup.classList.remove("visible");
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 600);
+      } else {
+        image.src = images[currentIndex];
+        popup.style.display = "block";
+        setTimeout(() => {
+          popup.classList.add("visible");
+        }, 10);
+      }
+    }
+
+    function changeImage(direction) {
+      const image = document.getElementById("popupImage");
+
+      // Start fade-out
+      image.classList.add("fade");
+
+      setTimeout(() => {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        image.src = images[currentIndex];
+
+        // Start fade-in
+        image.classList.remove("fade");
+      }, 300); // Delay matches the CSS transition duration
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+

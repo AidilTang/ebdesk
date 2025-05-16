@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBdesk Profile 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Image Popup Styles */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.3);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+            z-index: 10;
+        }
+
+        .popup-container.visible {
+            display: block;
+            transform: translate(-50%, -50%) scale(2);
+            opacity: 1;
+        }
+
+        .popup-image {
+            max-width: 80vw;
+            max-height: 80vh;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        .popup-image.fade {
+            opacity: 0;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            user-select: none;
+        }
+
+        .nav-button:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #prevBtn {
+            left: -60px;
+        }
+
+        #nextBtn {
+            right: -60px;
+        }
+
+        .gallery-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        /* Added to make sure popup appears above everything */
+        body {
+            position: relative;
+        }
+        
+        /* Overlay for when popup is visible */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 9;
+        }
+        
+        .overlay.visible {
+            display: block;
+        }
+        .close-button {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            font-size: 10px;
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 11;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .close-button:hover {
+            background: #e60000;
+        } 
+    </style>
+</head>
+<body>
+    <div class="menu-toggle">☰</div>
+    <div class="floating-particles"></div>
+    <div class="sidebar">
+        <div class="logo">
+            <h1>EBDESK</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#data-sources">Data Sources</a></li>
+            <li><a href="#multimodal">Multimodal</a></li>
+            <li><a href="#gen-ai-potential">Generative AI</a></li>
+            <li class="has-submenu">
+                <a href="#use-cases">Use Cases</a>
+                <ul class="submenu">
+                    <li><a href="#media-intelligence">Media Intelligence</a></li>
+                    <li><a href="#information-warfare">Information Warfare</a></li>
+                    <li class="has-submenu">
+                        <a href="#government-intelligence">Government Intelligence</a>
+                        <ul class="submenu">
+                            <li><a href="#government-intelligence">Geostrategic Intelligence</a></li>
+                            <li><a href="#government-intelligence">Territorial Intelligence</a></li>
+                            <li><a href="#government-intelligence">Political Intelligence</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#business-excellence">Business Excellence</a>
+                        <ul class="submenu">
+                            <li><a href="#business-excellence">Market Intelligence</a></li>
+                            <li><a href="#business-excellence">Risk Management</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#data-center">Data Center AI Assistant</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+    <header>
+        <h1>EBDESK</h1>
+        <h2>Unlocking Better Decision Making with Big Data, Data Science, and Generative AI</h2>
+    </header>
+        <div id="popup" class="popup-container">
+            <button class="close-button" onclick="togglePopup()">✖</button>
+            <button class="nav-button" id="prevBtn" onclick="changeImage(-1)">&lt;</button>
+            <img id="popupImage" class="popup-image" src="" alt="Geology Landscape" />
+            <button class="nav-button" id="nextBtn" onclick="changeImage(1)">&gt;</button>
+        </div>
+    <section id="about">
+        <h2>Big Data, Data Science, and Generative AI</h2>
+        <p>Leading the forefront of technological innovation, eBdesk excels in harnessing the power of Big Data, Data Science, and Generative AI to drive business transformation and unlock new opportunities. By leveraging vast datasets and advanced analytics, eBdesk provides deep insights and predictive capabilities that enable organizations to make data-driven decisions with precision and confidence.</p>
+        <p>Our expertise in data science allows us to develop sophisticated algorithms and models that uncover hidden patterns and trends, optimizing processes and enhancing efficiency across various industries.</p>
+        <p>With Generative AI, eBdesk pushes the boundaries of creativity and automation, generating new content, solutions, and ideas that revolutionize fields such as content creation, design, and customer engagement.</p>
+        
+        <div class="stats">
+            <div>
+                <h1>500+</h1>
+                <p>CLIENTS</p>
+                <p>Serving more than 500 clients from both Indonesia and Malaysia government, private sectors, and organizations since 2001.</p>
+            </div>
+            <div>
+                <h1>500+</h1>
+                <p>persons</p>
+                <p>Powered by hundreds of AI Engineers, Data Scientists, Data Analysts, Strategic Consultants</p>
+            </div>
+            <div>
+                <h1>1500+</h1>
+                <p>servers</p>
+                <p>Powered by more than 1500 server Big Data and GPU, separated in 3 Data Centers</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="applications">
+        <h2>Applications</h2>
+        <ul>
+            <li>Media & Social Media Intelligence</li>
+            <li>Information Warfare</li>
+            <li>Campaign Management</li>
+            <li>Market Intelligence</li>
+            <li>Geostrategic Intelligence</li>
+            <li>Territorial Intelligence</li>
+            <li>Political Intelligence</li>
+            <li>Risk Management</li>
+            <li>Knowledge Management</li>
+        </ul>
+                <button class="gallery-button" onclick="openGallery('application')">View Our Applicaton</button>
+    </section>
+
+    <section id="analytics">
+        <h2>Analytics Use Cases</h2>
+        <ul>
+            <li>TERRITORIAL</li>
+            <li>MARKET</li>
+            <li>ECONOMIC</li>
+            <li>POLITICAL</li>
+            <li>SECURITY</li>
+            <li>GEOSTRATEGIC</li>
+            <li>INDUSTRIAL</li>
+            <li>DEMOGRAPHIC</li>
+            <li>FINANCIAL</li>
+        </ul>
+        <button class="gallery-button" onclick="openGallery('analyticlevel')">View Our Analytic Levels</button>
+    </section>
+
+    <section id="data-sources">
+        <h2>Data Sources</h2>
+        <div>
+            <h3>External Data</h3>
+            <ul>
+                <li>SURVEY & RESEARCH</li>
+                <li>BOOKS</li>
+                <li>SOCIAL MEDIA</li>
+                <li>USER REVIEWS</li>
+                <li>HUMINT</li>
+                <li>NEWS / EVENTS</li>
+                <li>INTERNATIONAL DATA</li>
+                <li>GOVERNMENT DATA</li>
+                <li>ECONOMIC DATA</li>
+                <li>WEATHER & TRAFFIC</li>
+                <li>VIDEO & PODCAST</li>
+                <li>GEOGRAPHICS</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Internal Data</h3>
+            <ul>
+                <li>FINANCIAL DATA</li>
+                <li>OPERATION DATA</li>
+                <li>MARKETING DATA</li>
+                <li>PRODUCTION DATA</li>
+                <li>HR DATA</li>
+                <li>COMPETITOR DATA</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="decision-making">
+        <h2>Faster & Better Decision Making</h2>
+        <p>In today's fast-paced business environment, top-level decision-making is increasingly enhanced by the integration of generative AI through mobile interfaces and messaging platforms.</p>
+        <p>Executives can now leverage AI-driven insights and recommendations directly on their smartphones, allowing for quick, data-driven decisions anytime and anywhere.</p>
+        <p>Generative AI processes vast amounts of data to identify patterns, forecast trends, and suggest optimal strategies, all delivered seamlessly via intuitive mobile apps and instant messaging services. This accessibility ensures that critical decisions are informed by the latest analytics, fostering agility and responsiveness in the leadership process, ultimately driving better business outcomes.</p>
+        <button class="gallery-button" onclick="openGallery('faster')">View</button>
+    </section>
+
+    <section id="multimodal">
+        <h2>Multimodal</h2>
+        <p>Multimodal generative AI refers to systems that can process and generate content across multiple types of data, such as text, images, audio, and video, simultaneously. These AI models are designed to understand and integrate information from different modalities to create cohesive and contextually relevant outputs. For example, a multimodal AI can generate descriptive text based on an image, create images from textual descriptions, or produce videos that synchronize visual and audio elements effectively.</p>
+        <p>This capability is particularly useful in applications such as advanced virtual assistants, interactive media creation, and sophisticated data analysis, where understanding and generating diverse forms of content is essential. The integration of multiple modalities enhances the AI's ability to interact with and interpret the world in a more human-like manner, making it a powerful tool for innovation across various industries.</p>
+        <p>Recognize and generate content across multiple types of data, such as text, images, audio, and video</p>
+        <button class="gallery-button" onclick="openGallery('multimodal')">View Our MultiModal</button>
+    </section>
+
+    <section id="gen-ai-potential">
+        <h2>THE UNLIMITED POTENTIAL OF Generative AI</h2>
+        <p>Driving better business outcomes and positioning organizations to thrive in an increasingly competitive landscape.</p>
+        <p>In the realm of top-level decision-making, the incorporation of generative AI marks a significant shift toward more efficient and insightful strategic planning. Generative AI leverages advanced machine learning algorithms to analyze vast datasets, identify underlying patterns, and forecast potential outcomes with high accuracy. For executives, this means access to a powerful tool that not only processes information at unprecedented speeds but also generates actionable insights that can guide crucial decisions.</p>
+        <p>By utilizing generative AI, leaders can explore various scenarios and their implications without the constraints of human bias or limited data processing capabilities. This technology can simulate different strategies, predict market trends, and optimize resource allocation, providing a comprehensive view that supports well-informed decision-making. The AI models continuously learn and adapt, ensuring that the insights remain relevant and accurate over time.</p>
+        <p>For instance, in financial planning, generative AI can analyze historical data, current market conditions, and economic indicators to suggest the best investment strategies or cost-saving measures. In supply chain management, it can predict disruptions and recommend adjustments to mitigate risks. Moreover, generative AI can enhance customer experience strategies by analyzing consumer behavior patterns and predicting future trends, allowing businesses to tailor their offerings more effectively.</p>
+        <p>Overall, generative AI empowers top-level executives with a robust decision-making framework that combines the precision of data-driven insights with the flexibility of mobile technology. It transforms the decision-making process into a more dynamic, informed, and strategic endeavor, driving better business outcomes and positioning organizations to thrive in an increasingly competitive landscape.</p>
+        <button class="gallery-button" onclick="openGallery('gen-ai')">View Our Generative AI</button>
+    </section>
+
+    <section id="gen-ai-framework">
+        <h2>Generative AI Framework</h2>
+        <p>Data from various sources like internal systems, media, social media, statistical data, books, and research are aggregated into a Data Lake for training purposes. This data is then used in Deep Learning processes involving text, image, and video processing, contributing to a Large Language Model (LLM) and a Universal Knowledge Base, which employs supervised, unsupervised, and reinforcement learning methods.</p>
+        <p>The processing phase integrates specific knowledge through internal semantic vectors, functioning alongside LLM processing capabilities. These are then translated into semantic chains by an AI multi-agent system, utilized in multimodal visualization tools and prompt management for front-end applications, enabling functionalities such as cognitive search, image discovery, and audio-visual discovery.</p>
+        <button class="gallery-button" onclick="openGallery('gen-ai-framework')">View Our Generative AI Framework</button>
+    </section>
+
+    <section id="llm-text-processing">
+        <h2>LLM Text Processing</h2>
+        <p>Sophisticated LLM (Large Language Model) text processing integrates various analytical features to provide comprehensive insights.</p>
+        <ul>
+            <li><strong>Topic Analysis</strong> - identifies and categorizes the main subjects or themes discussed in the text. For instance, it highlights key statements and quotes related to specific topics, such as political relationships and structural issues within the Russian defense ministry.</li>
+            <li><strong>5W+1H Analysis</strong> - breaks down information into essential components: Who, What, When, Where, Why, and How. It systematically analyzes and presents data about significant actors, events, locations, and contexts. This helps in understanding the full scope of the situation being discussed.</li>
+            <li><strong>Actors Analysis</strong> - visualizes the relationships and interactions among various individuals and entities mentioned in the text. By mapping these connections, it provides a clear view of the network of influencers and key players involved in the topic.</li>
+            <li><strong>Location Statistics</strong> - statistical analysis of locations mentioned in the text offers insights into geographical distribution and the frequency of mentions. It helps in identifying hotspots or regions that are central to the discussion.</li>
+            <li><strong>Sentiment Analysis with Score</strong> - assesses the sentiment expressed in the text, providing a score that quantifies the positivity or negativity of statements. It offers a detailed breakdown of sentiments related to specific issues or events, enabling a nuanced understanding of the emotional tone.</li>
+        </ul>
+        <p>The LLM text processing system effectively combines these analytical tools to extract, categorize, and interpret complex information from large datasets. This integration allows users to gain deep insights and make informed decisions based on a thorough understanding of the data.</p>
+        <button class="gallery-button" onclick="openGallery('llm')">View Our LLM Text Processing</button>
+    </section>
+
+    <section id="image-video-processing">
+        <h2>Image & Video Processing</h2>
+        <h3>Image Processing:</h3>
+        <ul>
+            <li><strong>Object Detection:</strong> Identifies and classifies objects within images for applications like automated tagging and surveillance.</li>
+            <li><strong>Image Captioning:</strong> Generates descriptive text for images, aiding accessibility and SEO.</li>
+            <li><strong>Image Enhancement:</strong> Improves image quality and performs edits, beneficial for photography and medical imaging.</li>
+            <li><strong>Visual Data Analysis:</strong> Analyzes patterns in images for insights in agriculture, remote sensing, and industrial monitoring.</li>
+        </ul>
+        <button class="gallery-button" onclick="openGallery('imageprocess')">View Our Image Processing</button>
+        <h3>Video Processing:</h3>
+        <ul>
+            <li><strong>Content Analysis:</strong> Identifies key frames and actions within videos, useful for content moderation and highlight creation.</li>
+            <li><strong>Gesture Recognition:</strong> Interprets human activities and gestures in videos for surveillance and sports analytics.</li>
+            <li><strong>Video Captioning:</strong> Creates captions and summaries, enhancing accessibility and navigation of video content.</li>
+            <li><strong>AR/VR Integration:</strong> Enhances augmented and virtual reality experiences through real-time visual analysis and content generation.</li>
+        </ul>
+        <p>These capabilities enable LLMs to provide robust tools for analyzing, generating, and enhancing visual media, driving innovation and efficiency across various industries.</p>
+        <button class="gallery-button" onclick="openGallery('videoprocess')">View Our Video Processing</button>
+    </section>
+
+    <section id="system-framework">
+        <h2>System Framework</h2>
+        <p>The framework is integration of a comprehensive Big Data platform with Generative AI and LLM (Large Language Model) processing to provide diverse intelligence solutions. The Generative AI component processes this data through advanced text, image, video, and event processing techniques, enabling massive profiling and generating actionable insights.</p>
+        <p>This integrated approach facilitates a robust and dynamic environment for data-driven decision-making across multiple domains.</p>
+    </section>
+
+    <section id="solution-framework">
+        <h2>Solution Framework</h2>
+        <h3>Intelligence Domains:</h3>
+        <ul>
+            <li><strong>TERRITORIAL INTELLIGENCE:</strong> Land Use and Urban Planning, Infrastructure Development, Agricultural and Land Productivity, Resource Exploration and Extraction Data, Energy Production and Consumption, Climate Change Indicators, Biodiversity and Conservation Efforts, Natural Disaster Risks Management</li>
+            <li><strong>MARKET INTELLIGENCE:</strong> Market Size & Growth, Consumer Demography & Psychography, Behavior & Trends, Competitive Analysis, Market Share & Segmentation</li>
+            <li><strong>ECONOMIC INTELLIGENCE:</strong> Macroeconomic Indicators, Trade and Investment Flows, Fiscal and Monetary Policies</li>
+            <li><strong>POLITICAL INTELLIGENCE:</strong> Governance and Political Stability, Policy and Regulatory Changes, Political Parties and Election Data</li>
+            <li><strong>SECURITY INTELLIGENCE:</strong> Internal and External Security Threats, Cybersecurity Landscape, Law Enforcement and Crime Statistics</li>
+            <li><strong>GEOSTRATEGIC INTELLIGENCE:</strong> Geopolitical Alliances, Military Capabilities and Deployments, Territorial Disputes and Geopolitical Risks, Diplomatic Relationship</li>
+            <li><strong>INDUSTRIAL INTELLIGENCE:</strong> Manufacturing Indices, Supply Chain and Logistics, Industrial Output and Efficiency</li>
+            <li><strong>DEMOGRAPHIC INTELLIGENCE:</strong> Population Dynamics and Migration, Demography & Psychography, Labor Market and Employment Trends, Social and Cultural Trends</li>
+            <li><strong>FINANCIAL INTELLIGENCE:</strong> Banking and Financial Markets, Investment Trends, Financial Regulations and Compliance</li>
+        </ul>
+    </section>
+
+    <section id="analytics-levels">
+        <h2>High Power Analytics in Big Data</h2>
+        <p>Today, most organizations emphasize data to drive business decisions, but data alone is not the goal. Facts and figures are meaningless if we cannot gain valuable insights that lead to more informed action.</p>
+        <p>Analytics solutions offer ways to leverage business data, with multiple levels of analytics, ranging from descriptive, diagnostic, predictive, and prescriptive analytics.</p>
+        
+        <h3>Analytics Levels:</h3>
+        <ul>
+            <li><strong>Descriptive Analytics:</strong> What happens? - Visualization Reporting & Data Mining</li>
+            <li><strong>Diagnostic Analytics:</strong> Why it happens? - What-if Analysis, Root Cause Analysis, Query</li>
+            <li><strong>Predictive Analytics:</strong> What will happen? - Simulation, Regression Analysis, Casual Forecasting</li>
+            <li><strong>Prescriptive Analytics:</strong> What must we do? - Optimization Heuristics, Rule Based Systems</li>
+            <li><strong>Artificial Intelligence:</strong> Effort to increase human reasoning - Machine and Deep Learning, Natural Language Processing</li>
+        </ul>
+        <p>Insight → Decision → Action</p>
+    </section>
+
+    <section id="use-cases">
+        <h2>USE CASES</h2>
+        
+        <div id="media-intelligence">
+            <h3>Media Intelligence</h3>
+            <p>Media intelligence system is designed to monitor, analyze, and interpret news and social media content in real-time. By leveraging data science and generative AI, this system provides valuable insights into public sentiment, trending topics, and media coverage, enabling organizations to make informed decisions and respond proactively to media developments.</p>
+            <h4>Modules:</h4>
+            <ul>
+                <li><strong>News Monitoring:</strong> Tracks news articles from various sources, identifying key stories, topics, and trends. Real-time tracking and categorization of news content, sentiment analysis, and keyword identification.</li>
+                <li><strong>Social Media Monitoring:</strong> Monitors social media platforms for mentions, hashtags, and user engagement related to specific topics or brands. Analyzes posts, comments, likes, shares, and overall engagement to gauge public opinion and influence.</li>
+                <li><strong>Sentiment Analysis:</strong> Evaluates the tone of news articles and social media posts to determine public sentiment. Uses natural language processing (NLP) to classify sentiment as positive, negative, or neutral.</li>
+                <li><strong>Trend Analysis:</strong> Identifies emerging trends and topics across news and social media, highlights trending keywords and hashtags, providing insights into evolving public interests.</li>
+                <li><strong>Influencer Identification:</strong> Detects key influencers and opinion leaders in the media landscape by identifying individuals with significant impact.</li>
+                <li><strong>Crisis Management:</strong> Alerts users to potential crises and helps manage reputation risks. Real-time alerts for negative coverage and high-risk mentions, with recommendations for response strategies.</li>
+                <li><strong>Competitive Analysis:</strong> Compares media coverage and social media presence of competitors. Provides insights into competitors' media strategies and public perception.</li>
+                <li><strong>Customizable Dashboards:</strong> Offers visual representation interactive dashboards with customizable charts, graphs, and maps to display key metrics and trends.</li>
+                <li><strong>Automated Reporting:</strong> Generates regular reports summarizing media activity by scheduled and on-demand reports with detailed analysis and insights.</li>
+            </ul>
+            <p>Media intelligence system helps organizations stay informed about media dynamics, manage their reputation, and respond effectively to public sentiment and media trends.</p>
+            
+            <h4>Media Intelligence Products:</h4>
+            <ul>
+                <li><strong>IMA - Intelligence Media Analytics:</strong> Media analysis from online, print, and TV media sources, including expose, issue, influencer, media share, sentiment, maps analysis, ontology, and other strategic analysis.</li>
+                <li><strong>ISA - Intelligence Socio Analytics:</strong> Public opinion analysis from social media includes public perception of an event, figure, organization, case, issue, or policy, and public demographic analysis based on user profile (age, gender, location, activity, awareness, influence, hobby).</li>
+                <li><strong>Advance Network Analysis:</strong> Raises analysis in the form of a network that interprets the relationship between accounts of an issue, influencers, buzzers, and liaisons between issues and accounts from social media such as Twitter, Instagram, and Youtube.</li>
+                <li><strong>IAS - Information Admiralty System:</strong> A system that is able to monitor information on media and social media in real time, recognize issues, detect potential hoaxes, propaganda, hatespeech, demographic spread, psychography, engagement.</li>
+            </ul>
+        </div>
+        
+        <div id="information-warfare">
+            <h3>Information Warfare</h3>
+            <p>Advanced intelligence ecosystem that integrates various data sources and analytical tools to form a comprehensive Early Warning System (EWS). Key components include Intelligence Social Analytics (ISA), Intelligence Media Analytics (IMA), Intelligence Portal Data (IPD), and DeepWeb Intelligence (DWI), which collectively gather data from social media platforms, news outlets, web portals, and the deep web.</p>
+            <p>This data is processed through Massive Profiling (MP) and fed into a Command Center equipped with Big Data capabilities and an Information Admiralty System (IAS). The system leverages Real-Time Analytics (RTA) and Advanced Network Analytics (ANA) to provide actionable insights, which inform campaign management strategies and the activities of Intelligence Cyber Troops (ICT).</p>
+            <p>This robust framework enables organizations to engage, campaign, and influence opinions effectively, while continuously monitoring and analyzing information to detect and mitigate potential threats.</p>
+            
+            <h4>Information Warfare Components:</h4>
+            <ul>
+                <li><strong>Massive Profiling (MP):</strong> Intelligence Massive Profiling - Mapping hundreds of millions of social media accounts for demographic analysis, psychography, networking, and conversation, for tactical and strategic problem solving.</li>
+                <li><strong>RTA - Real Time Analytics:</strong> More in-depth analysis of issues in realtime both potentially trending, finding the origin of issues (actors), both on social media such as Twitter and Facebook, as well as Group Messenger such as Whatsapp and Telegram.</li>
+                <li><strong>ICT - Intelligence CyberTroops / Avatar:</strong> AI-based avatar management software transforms the way digital personas are created, managed, and utilized across various platforms. This software leverages Generative AI to generate highly realistic and customizable avatars, reflecting individual preferences, enhancing user engagement and interaction. AI-driven avatar management systems can continuously learn and adapt, improving their responsiveness and effectiveness over time.</li>
+                <li><strong>ICM - Intelligence Campaign Management:</strong> Harnesses the power of Generative AI and data science to optimize campaigns with unprecedented precision and efficiency. AI can automate and personalize campaign elements, including content creation, audience targeting, and timing, ensuring that messages resonate with the right audience at the right time. Furthermore, AI-driven tools provide real-time performance analytics, enabling users to continuously monitor and adjust campaigns for optimal results.</li>
+            </ul>
+        </div>
+        
+        <div id="government-intelligence">
+            <h3>Government Intelligence</h3>
+            <ul>
+                <li><strong>DATA INTELLIGENCE:</strong> The data portal becomes a gateway for users spread across different organizations to access datasets and visualizations that have been uploaded and shared into the data portal.</li>
+                <li><strong>POLITICAL INTELLIGENCE:</strong> Political intelligence system is designed to monitor, analyze, and interpret political data and trends to provide actionable insights for governments, organizations, and businesses. This system leverages data science and AI to track governance and political stability, policy and regulatory changes, and political party activities and election data, enabling stakeholders to make informed decisions and strategic plans.</li>
+                <li><strong>GEOSTRATEGIC INTELLIGENCE:</strong> Enhances the ability of organizations to analyze and manage geographic and spatial data effectively. Software integrates diverse data sources, such as satellite imagery, demographic statistics, economic indicators, and real-time sensor data, to provide a comprehensive view of specific territories. It can identify patterns, predict trends, and detect anomalies within the data, offering actionable insights for strategic planning and decision-making.</li>
+                <li><strong>TERRITORIAL INTELLIGENCE:</strong> Enhances the ability of organizations to analyze and manage territorial effectively by integrates diverse data sources, such as real time events, demographic statistics, economic indicators, and real-time data, to provide a comprehensive view of territories. It can identify patterns, predict trends, and detect anomalies within the data, offering actionable insights for strategic planning and decision-making.</li>
+            </ul>
+            
+            <h4>Geostrategic Intelligence:</h4>
+            <p>A geostrategic intelligence system is a comprehensive framework designed to gather, analyze, and interpret data related to the geopolitical and strategic environment. This system helps organizations, governments, and military entities understand the complex interplay of political, economic, social, and military factors on a global scale.</p>
+            <ul>
+                <li><strong>Data Collection:</strong> aggregates data from various sources, including satellite imagery, social media, news reports, governmental databases, and open-source intelligence (OSINT).</li>
+                <li><strong>Analysis and Interpretation:</strong> Using sophisticated analytical tools, the system evaluates the collected data to identify patterns, trends, and potential threats to understand the strategic implications of different geopolitical events and developments.</li>
+                <li><strong>Scenario Simulation:</strong> The system can simulate various geopolitical scenarios to predict potential outcomes and impacts, that crucial for strategic planning and decision-making.</li>
+                <li><strong>Risk Assessment:</strong> It assesses risks associated with geopolitical changes, including political instability, economic sanctions, military conflicts, and other threats.</li>
+                <li><strong>Visualization and Reporting:</strong> The system presents the analyzed data in an easily interpretable format, such as interactive dashboards, maps, and detailed reports.</li>
+                <li><strong>Real-Time Monitoring:</strong> Continuous monitoring of geopolitical events allows for real-time updates and alerts, enabling swift responses to emerging threats or opportunities.</li>
+                <li><strong>Strategic Recommendations:</strong> Based on the analysis, the system provides strategic recommendations to policymakers, business leaders, and military commanders.</li>
+            </ul>          
+            <h4>Territorial Intelligence:</h4>
+            <p>A territorial intelligence system is a sophisticated framework designed to monitor, analyze, and manage data related to geographic and spatial events. Utilizing data science and generative AI, this system provides real-time monitoring, predictive analytics, and strategic recommendations to enhance decision-making processes. It is particularly valuable for governments, military organizations, businesses, and environmental agencies that require comprehensive insights into territorial dynamics.</p>
+            <ul>
+                <li><strong>Event Monitoring and Detection:</strong> Uses AI to continuously scan data sources for significant events, triggering real-time alerts.</li>
+                <li><strong>Real-Time Alerts and Notifications:</strong> Sends immediate alerts about detected events via email, SMS, or in-app messages.</li>
+                <li><strong>Predictive Analytics:</strong> Analyzes data to forecast future events and trends using machine learning models.</li>
+                <li><strong>Geospatial Data Visualization:</strong> Displays data on interactive maps and dashboards with tools like heat maps and trend lines.</li>
+                <li><strong>Risk Assessment and Management:</strong> Evaluates event impact and generates risk scores to prioritize response actions.</li>
+                <li><strong>Strategic Recommendations:</strong> Provides actionable insights and recommendations based on data analysis.</li>
+                <li><strong>Data Integration and Management:</strong> Integrates data from multiple sources, ensuring comprehensive and up-to-date information.</li>
+                <li><strong>Customizable Reporting:</strong> Generates tailored reports summarizing key findings and insights.</li>
+                <li><strong>User Management and Security:</strong> Manages user access, data security, and compliance with regulations.</li>
+            </ul>
+            <p><strong>Benefits:</strong></p>
+            <ul>
+                <li><strong>Situational Awareness:</strong> Real-time monitoring and alerts ensure information about critical events.</li>
+                <li><strong>Proactive Risk Management:</strong> Predictive analytics and risk assessment tools help in anticipating and mitigating potential threats.</li>
+                <li><strong>Informed Decision-Making:</strong> Strategic recommendations and scenario analysis support better planning and response strategies.</li>
+                <li><strong>Efficient Resource Allocation:</strong> Optimize resources by identifying high-priority areas and actions.</li>
+                <li><strong>Improved Coordination:</strong> Facilitates better communication and coordination among different agencies and departments.</li>
+            </ul>
+            
+            <h4>Political Intelligence:</h4>
+            <p>Political intelligence system is designed to monitor, analyze, and interpret political data and trends to provide actionable insights for governments, organizations, and businesses. This system leverages data science and AI to track governance and political stability, policy and regulatory changes, and political party activities and election data, enabling stakeholders to make informed decisions and strategic plans.</p>
+            <p><strong>Governance and Political Stability:</strong></p>
+            <ul>
+                <li>Monitors the stability and effectiveness of governments, tracking events such as protests, government performance, and geopolitical tensions.</li>
+                <li>Provides real-time updates and risk assessments regarding political stability, helping users anticipate and respond to changes.</li>
+            </ul>
+            <p><strong>Policy and Regulatory Changes:</strong></p>
+            <ul>
+                <li>Tracks changes in policies, regulations, and laws across different regions.</li>
+                <li>Analyzes the impact of regulatory changes on various sectors and provides alerts and insights to stay compliant and adapt strategies accordingly.</li>
+            </ul>
+            <p><strong>Political Parties and Election Data:</strong></p>
+            <ul>
+                <li>Monitors the activities, strategies, and performance of political parties, as well as election outcomes and trends.</li>
+                <li>Analyzes election data to predict outcomes, identify key players, and understand political dynamics that could affect business and policy environments.</li>
+            </ul>
+            <p>This political intelligence system enables users to stay informed about political developments, assess risks, and leverage insights for strategic decision-making.</p>
+        </div>
+        
+        <div id="business-excellence">
+            <h3>Business Excellence</h3>
+            <ul>
+                <li><strong>KNOWLEDGE MANAGEMENT:</strong> Enhances organizational efficiency by intelligently capturing, organizing, and retrieving information. Utilizing advanced machine learning algorithms, this software can analyze and categorize vast amounts of data from various sources, including documents, emails, databases, and social media. It facilitates seamless knowledge sharing by providing intuitive search capabilities, recommending relevant content, and predicting user needs based on past interactions.</li>
+                <li><strong>RISK MANAGEMENT:</strong> Utilizes data science and Generative AI with MultiAgent to identify, assess, and mitigate risks in real-time, enhancing an ability to manage uncertainty and protect its assets. This software continuously analyzes vast datasets from various sources, such as financial reports, market trends, regulatory changes, and internal operations, to detect patterns and anomalies that indicate potential risks. Through predictive modeling, AI can forecast future risk scenarios and provide actionable insights, to proactively address issues before they escalate.</li>
+                <li><strong>REPUTATION MANAGEMENT:</strong> Reputation management system for corporations leveraging AI is designed to monitor, analyze, and protect the public perception of a company. This system uses advanced machine learning and natural language processing to track online mentions, assess public sentiment, manage crises, and provide actionable insights to maintain and enhance a corporation's reputation.</li>
+                <li><strong>MARKET INTELLIGENCE:</strong> Market intelligence system is a comprehensive framework designed to gather, analyze, and interpret data related to market trends, competitors, and consumer behaviors. This system helps businesses make informed decisions by providing insights into market dynamics and identifying opportunities and threats. Continuously monitors changes in the market environment, including new product launches, regulatory changes, and economic shifts.</li>
+            </ul>
+            
+            <h4>Market Intelligence:</h4>
+            <p>Market intelligence system is a comprehensive framework designed to gather, analyze, and interpret data related to market trends, competitors, and consumer behaviors. This system helps businesses make informed decisions by providing insights into market dynamics and identifying opportunities and threats.</p>
+            <p><strong>Data Collection:</strong></p>
+            <ul>
+                <li>System collects data from various sources, including market reports, financial news, customer feedback, social media, sales data, and industry publications.</li>
+            </ul>
+            <p><strong>Data Analysis:</strong></p>
+            <ul>
+                <li>Trend Analysis: Identifies market trends and patterns to forecast future market conditions and consumer behavior.</li>
+                <li>Competitive Analysis: Examines competitors' activities, strengths, weaknesses, market share, and strategies.</li>
+            </ul>
+            <p><strong>Market Segmentation:</strong></p>
+            <ul>
+                <li>Segmentation Techniques: Divides the market into distinct segments based on demographics, psychographics, behavior, and geographic.</li>
+                <li>Targeting: Helps businesses identify and target the most profitable market segments.</li>
+            </ul>
+            <p><strong>Consumer Insights:</strong></p>
+            <ul>
+                <li>Behavioral Analysis: Studies consumer behavior, preferences, and purchasing patterns to understand what drives their decisions.</li>
+                <li>Customer Feedback: Analyzes feedback from various channels to gauge customer satisfaction and identify areas for improvement.</li>
+            </ul>
+            <p><strong>Real-Time Monitoring:</strong></p>
+            <ul>
+                <li>Market Dynamics: Continuously monitors changes in the market environment, including new product launches, regulatory changes, and economic shifts.</li>
+                <li>Alerts and Notifications: Provides real-time alerts on significant market events or changes.</li>
+            </ul>
+            <p><strong>Strategic Recommendations:</strong></p>
+            <ul>
+                <li>Actionable Insights: Offers strategic recommendations based on the analysis to help businesses optimize their marketing strategies, product development, and overall business operations.</li>
+                <li>Scenario Planning: Assists in planning for various market scenarios to mitigate risks and capitalize on opportunities.</li>
+            </ul>
+            <p><strong>Use Case:</strong></p>
+            <ul>
+                <li>Product Development: Identifying consumer needs and market gaps to develop new products or improve existing ones.</li>
+                <li>Marketing Strategies: Crafting effective marketing campaigns based on market and consumer insights.</li>
+                <li>Sales Optimization: Enhancing sales strategies and identifying new sales opportunities.</li>
+                <li>Business Expansion: Assisting in market entry strategies and identifying new geographical markets.</li>
+            </ul>
+            
+            <h4>Risk Management:</h4>
+            <p>In an ever-evolving business landscape, managing risks effectively is crucial for organizational success and resilience. This innovative solution leverages state-of-the-art AI technology to identify, assess, and mitigate risks in real-time with modules designed for comprehensive risk analysis, predictive modelling, and compliance management.</p>
+            
+            <p>By integrating external threat intelligence and providing actionable insights through intuitive dashboards, the system empower the organization to make informed decisions and maintain operational continuity.</p>
+            
+            <p>Embrace the future of risk management with AI-driven platform, tailored to safeguard organization in a dynamic environment.</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Module</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Risk Identification</td>
+                    <td>Uses AI to scan data sources, identifying potential risks by analyzing trends and anomalies.</td>
+                </tr>
+                <tr>
+                    <td>Risk Assessment and Analysis</td>
+                    <td>Evaluates identified risks, calculating probability and impact, and prioritizing based on severity.</td>
+                </tr>
+                <tr>
+                    <td>Predictive Risk Modeling</td>
+                    <td>Predicts future risks using machine learning from historical data, forecasting emerging risks.</td>
+                </tr>
+                <tr>
+                    <td>Risk Mitigation Planning</td>
+                    <td>Generates actionable mitigation plans and suggests optimal strategies to reduce risk exposure.</td>
+                </tr>
+                <tr>
+                    <td>Compliance Management</td>
+                    <td>Monitors regulatory changes, ensuring adherence to regulations and standards, providing alerts.</td>
+                </tr>
+                <tr>
+                    <td>Incident Response</td>
+                    <td>Facilitates quick responses to risk incidents, creating reports and post-incident analysis.</td>
+                </tr>
+                <tr>
+                    <td>Reporting and Dashboard</td>
+                    <td>Provides real-time dashboards and reports on risk metrics and trends for stakeholders.</td>
+                </tr>
+                <tr>
+                    <td>Scenario Analysis and Simulation</td>
+                    <td>Allows creation and analysis of various risk scenarios, aiding in strategic decision-making.</td>
+                </tr>
+                <tr>
+                    <td>Vendor Risk Management</td>
+                    <td>Evaluates and monitors third-party vendor risks, assessing performance and compliance.</td>
+                </tr>
+                <tr>
+                    <td>Business Continuity Planning</td>
+                    <td>Develops business continuity plans, ensuring operational recovery during disruptions.</td>
+                </tr>
+                <tr>
+                    <td>Threat Intelligence Integration</td>
+                    <td>Integrates external threat intelligence, providing real-time alerts on global threats.</td>
+                </tr>
+                <tr>
+                    <td>Fraud Detection</td>
+                    <td>Detects and prevents fraudulent activities using AI algorithms to monitor for suspicious behavior.</td>
+                </tr>
+            </tbody>
+        </table>    
+        <section>
+            <div>
+                <h2>Platform Framework</h2>
+                <div>
+                    <div>
+                        <h3>Data Collection System</h3>
+                        <p>Smart system that performs the process of retrieving and cleaning data from various sources</p>
+                    </div>
+                    <div>
+                        <h3>Data Integration</h3>
+                        <p>Smart system that manages transportation, queuing incoming data for processing and further transformation in the system</p>
+                    </div>
+                    <div>
+                        <h3>Data Lake/Storage</h3>
+                        <p>Smart system that manages data storage from various sources and formats, both structured data and unstructured data so that it can be accessed easily, quickly and safely.</p>
+                    </div>
+                    <div>
+                        <h3>Data Transformation & Enrichment</h3>
+                        <p>Smart systems that manage the process of managing data based on Artificial Intelligence including Natural Language Processing, Machine Learning, Deep Learning</p>
+                    </div>
+                    <div>
+                        <h3>Data Analytics & Visualization</h3>
+                        <p>Smart system that manages the process of analyzing data and visualized according to user needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Big Data Ecosystem</h2>
+            <p>The Big Data Ecosystem encompasses a comprehensive network of tools, technologies, and processes designed to collect, store, analyze, and visualize vast amounts of data. At its core, it integrates diverse data sources such as social media, IoT devices, transactional systems, and more, ensuring a continuous flow of structured and unstructured data. Key components include data storage solutions like Hadoop and cloud-based systems, data processing frameworks such as Spark, and advanced analytics platforms leveraging machine learning and AI for predictive and prescriptive insights. Visualization play a crucial role in translating complex data sets into actionable intelligence.</p>
+        </section>
+
+        <section>
+            <div id="data-center"></div>
+            <h2>Data Center AI Assistant</h2>
+             <p>In today's fast-paced network environments, troubleshooting and resolving issues quickly is paramount. Generative AI Assistant is at the heart of this expedient approach to problem-solving by leveraging state-of-the-art Natural Language Processing (NLP) to transforms the way network problems are identified and diagnosed.</p>
+            <p>When users encounter network glitches, the clarity of communication between them and the support systems can significantly impact the resolution time. Traditional systems rely on structured input, which requires users to identify and categorize their issues before any diagnostic process can begin.</p>
+            <p>In the realm of network management, data integration represents a foundational component that underpins all aspects of diagnostics, troubleshooting, and maintenance. It is the meticulous process of consolidating data from an array of internal and external sources to construct a comprehensive, 360-degree view of the network's ecosystem. The integration with network monitoring tools is a pivotal feature that enhances the capabilities of a network management system by allowing it to access and consolidate data from a multitude of network monitoring applications and devices.</p>
+            <h3>USE CASE</h3>
+            <div>
+                <div>
+                    <h4>1. Chat-Based Interaction: Allows users to interact with the virtual assistant through a chat interface.</h4>
+                </div>
+                <div>
+                    <h4>2. Automatic Diagnosis: based on the error description from the user using Natural Language Processing (NLP).</h4>
+                </div>
+                <div>
+                    <h4>3. Data Integration: combine data from manuals, configuration documents, and the internet to provide comprehensive solutions.</h4>
+                </div>
+                <div>
+                    <h4>4. Solutions Database: maintenance of a solutions database derived from previous cases to speed up the troubleshooting process.</h4>
+                </div>
+                <div>
+                    <h4>5. License Alerts: Notification system for licenses that are about to expire.</h4>
+                </div>
+                <div>
+                    <h4>6. Multi-Vendor Support: Support for devices from various vendors with the ability to automatically update the device data database.</h4>
+                </div>
+                <div>
+                    <h4>7. Integration with Network Monitoring: The ability to integrate and retrieve data from existing network monitoring tools.</h4>
+                </div>
+                <div>
+                    <h4>8. Automatic Updates: An automatic update feature from internet sources to add the latest solutions and product information.</h4>
+                </div>
+            </div>
+           
+        </section>
+        <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-intro">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team to learn more about how eBdesk can help your organization unlock the power of data.</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-input" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company</label>
+                        <input type="text" class="form-input" placeholder="Your company">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-textarea" placeholder="Your message"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="ebdesk-interactive.js"></script>
+    <script>
+            const imageSets = {
+                analyticlevel: [
+                    "asset/img/analyticlevel/Picture1.jpg",
+                    "asset/img/analyticlevel/Picture2.jpg",
+                    "asset/img/analyticlevel/Picture3.jpg",
+                    "asset/img/analyticlevel/Picture4.jpg"
+                ],    
+                application: [
+                    "asset/img/app/Picture5.png",
+                    "asset/img/app/Picture6.png",
+                    "asset/img/app/Picture7.jpg",
+                    "asset/img/app/Picture8.jpg",
+                    "asset/img/app/Picture9.png"
+                ], 
+                faster: [
+                    "asset/img/faster/phone.jpg",
+                    "asset/img/faster/Picture13.jpg"
+                ], 
+                multimodal: [
+                    "asset/img/multimodal/phone.jpg",
+                    "asset/img/multimodal/phone2.png",
+                    "asset/img/multimodal/phone3.png",
+                    "asset/img/multimodal/phone4.jpg",
+                    "asset/img/multimodal/phone5.png",
+                ], 
+            };
+            let currentImages = [];
+            let currentIndex = 0;
+    </script>
+    <script>     
+        function openGallery(sectionKey) {
+            currentImages = imageSets[sectionKey] || [];
+            currentIndex = 0;
+
+            if (currentImages.length === 0) return;
+
+            const image = document.getElementById("popupImage");
+            image.src = currentImages[currentIndex];
+
+            const popup = document.getElementById("popup");
+            popup.style.display = "block";
+            setTimeout(() => {
+                popup.classList.add("visible");
+            }, 10);
+        }
+
+        function togglePopup() {
+            const popup = document.getElementById("popup");
+            popup.classList.remove("visible");
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 600);
+        }
+
+        function changeImage(direction) {
+            if (currentImages.length ===0) return;
+            const image = document.getElementById("popupImage");
+
+      // Start fade-out
+            image.classList.add("fade");
+
+            setTimeout(() => {
+                currentIndex = (currentIndex + direction + currentImages.length) % currentImages.length;
+                image.src = currentImages[currentIndex];
+
+        // Start fade-in
+                image.classList.remove("fade");
+            }, 300); // Delay matches the CSS transition duration
+        }
+    </script>
+</body>
+</html>         
